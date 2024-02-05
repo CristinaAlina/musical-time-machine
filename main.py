@@ -36,3 +36,16 @@ access_token = spotify.get_access_token(as_dict=False)
 
 spotify_api_client = spotipy.client.Spotify(auth=access_token)
 user_id = spotify_api_client.current_user()["id"]
+
+uri_tracks_list = []
+year_date = user_date.split("-")[0]
+for song_title in song_titles:
+    query = f"track: {song_title} year: {year_date} artist: {song_artists[song_titles.index(song_title)]}"
+    result = spotify_api_client.search(q=query, limit=1, offset=0, type='track', market=None)
+
+    try:
+        track_uri = result["tracks"]["items"][0]["uri"]
+    except IndexError:
+        pass
+    else:
+        uri_tracks_list.append(track_uri)
