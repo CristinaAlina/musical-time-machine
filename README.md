@@ -11,7 +11,7 @@
 4. Go to Developer Dashboard and create a Spotify App: [Developer Dashboard](https://developer.spotify.com/dashboard/)
 5. Set an Redirect Uri and get your Cliend Id and Client Secret for Spotipy APIs 
 6. Use Spotipy documentation [Spotipy documentation]([https://spotipy.readthedocs.io/en/2.22.1/](https://spotipy.readthedocs.io/en/2.22.1/#spotipy.oauth2.SpotifyOAuth)) for Authorization Code Flow
-7. Use Search for item API for getting track uri using a format query with year, song title and artist: [Developer Spotify - Search](https://developer.spotify.com/documentation/web-api/reference/search)
+7. Use Search for item method for getting track uri using a format query with year, song title and artist: [Developer Spotify - Search](https://developer.spotify.com/documentation/web-api/reference/search)
 8. Format a list with all of the tracks uri that the search API has found.
 9. Use Create Playlist API for creating a playlist in Spotify: [Developer Spotify - create-playlist](https://developer.spotify.com/documentation/web-api/reference/create-playlist)
 10. Use Add Items to Playlist API for adding the list of uri songs to the new playlist id: [Developer Spotify - add-tracks-to-playlist](https://developer.spotify.com/documentation/web-api/reference/add-tracks-to-playlist)
