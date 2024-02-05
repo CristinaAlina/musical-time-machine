@@ -49,3 +49,16 @@ for song_title in song_titles:
         pass
     else:
         uri_tracks_list.append(track_uri)
+
+endpoint_create_playlist = f"https://api.spotify.com/v1/users/{user_id}/playlists"
+headers = {
+    "Authorization": f"Bearer {access_token}"
+}
+request_body = {
+    "name": f"{user_date} Billboard 100",
+    "description": f"Top 100 songs in {year_date}",
+    "public": False
+}
+post_response = requests.post(url=endpoint_create_playlist, json=request_body, headers=headers)
+
+playlist_id = post_response.json()["id"]
